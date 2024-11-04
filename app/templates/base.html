@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  <link rel="icon" type="image/x-icon" href="{% static 'images/urbex-icon.png' %}">
+</head>
+<body class="main-body">
+  <header class="header">
+    <h1 class="header-logo">
+      <a href= "{% url "home" %}"><img class="urbex-logo" src="{% static 'images/urbex-logo.png' %}" alt="logo"></a>
+    </h1>
+    <nav class="header-nav">
+      <ul class="header-ul">
+        <li><a href="" class="header-a">Post</a></li>
+        <li><a href="" class="header-a">About</a></li>
+        <li><a href="" class="header-a">Favorites</a></li>
+      </ul>
+    </nav>
+  </header>
+  {% block content %}
+
+  {% endblock content %}
+</body>
+</html>
