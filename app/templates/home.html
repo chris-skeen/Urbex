@@ -1,4 +1,14 @@
 {% extends "base.html" %}
- <h1>hi</h1>
+{% load widget_tweaks %}
 {% block content %}
+<form action="" method="get">
+  {% csrf_token %}
+  <div class="text-box-center">
+  {% render_field form.state placeholder="State" class+="state-box"%}
+  </div>
+  <div class="center">
+  <button class="state-filter-btn">Search</button>
+  </div>
+</form>
+
 {% endblock content %}
