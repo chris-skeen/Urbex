@@ -6,7 +6,7 @@ class Post(models.Model):
   name = models.CharField(max_length=150)
   state = models.CharField(max_length=50)
   city = models.CharField(max_length=50)
-  image = models.ImageField()
+  image = models.ImageField(default="app/static/images/urbex-icon.png")
   desc = models.CharField(max_length=500)
 
 def new_post(name, state, city, image, desc):

@@ -4,7 +4,7 @@
 {% block content %}
 <div class="center">
 <div class="form-div">
-    <form class="post-form" action="" method="post">
+    <form class="post-form" action="" method="POST" enctype ="multipart/form-data">
       {% csrf_token %}
       {% render_field form.name placeholder="Name" class+="boxes" %}
       <p class="form-field-desc"><i>Name Of Location</i></p>
