@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+  <div class="left">
+    <h1 class="what-is-h1">What is Urbex?</h1>
+    <p class="what-is-p">Urbex is a website used to find and explore abandoned places near you! With filtering and other options available. The users are able to make their own posts.</p>
+    <img class="urbex-icon-thing" src="{% static "images/urbex-icon.png" %}">
+  </div>
+  <div class="right">
+    <h1 class="what-is-h1">Color Palette:</h1>
+    <img class="color-palette" src="{% static "images/color-pallete.png" %}"/>
+  </div>
+  <h1 class="features-header">Key Features</h1>
+  <hr></hr>
+{% endblock content %}

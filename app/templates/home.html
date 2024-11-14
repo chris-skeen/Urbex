@@ -9,18 +9,19 @@
   <div class="center">
   <button class="state-filter-btn">Search</button>
   </div>
+  <h3 class="warning">{{warn}}</h3>
+  <h4 class="sub"><i>{{sub}}</i></h4t>
 </form>
 {% for i in data %}
 <div class="main-post-div">
 <div class="post-div">
   <h1 class="post-name">{{i.name}}</h1>
-  <img class="stylish-line" src="{% static "images/line.png" %}"/>
-  <div class="area-image-div">
-    <img class="area_image" src="http://127.0.0.1:8000/media/{{i.image}}" width="500" height="600" />
-  </div>
-  <p>{{i.state}}</p>
-  <p>{{i.city}}</p>
-  <p>{{i.desc}}</p>
+  <img class="stylish-line" src="{% static "images/cool-line.webp" %}"/>
+  <h2 class="state-name">{{i.state}}</h2>
+  <img class="area_image" src="http://127.0.0.1:8000/media/{{i.image}}" width="500" height="600" />
+  <h3 class="city-name">{{i.city}}</h3>
+  <h3 class="desc">{{i.desc}}</h3>
+  <img class="urbex-icon-forp" src="{% static "images/urbex-icon.png" %}"/>
 </div>
 </div>
 {% endfor %}

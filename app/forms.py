@@ -2,7 +2,7 @@ from django import forms
 
 
 class StateFilter(forms.Form):
-  state = forms.CharField(max_length=50, required=False)
+  state = forms.CharField(max_length=50)
 
 class UrbexForm(forms.Form):
   name = forms.CharField(max_length=150)
