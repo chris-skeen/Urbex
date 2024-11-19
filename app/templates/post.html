@@ -20,6 +20,10 @@
 
       {% render_field form.desc placeholder="Description" class+="desc-box" %}
       <p class="form-field-desc"><i>Please Enter A Description Under 500 Characters</i></p>
+      
+      {% render_field form.lat placeholder="Latitude" class+="boxes" %}
+      {% render_field form.long placeholder="Longitude" class+="boxes" %}
+      <p class="form-field-desc"><i>Please note that this is <b>not required</b> but needed if you want it to show on the map.</i></p>
 
       <button class="post-btn">Post!</button>
     </form>

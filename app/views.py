@@ -6,6 +6,7 @@ from .models import *
 from django.conf import settings
 from django.conf.urls.static import static
 from app.list_of_states import *
+import datetime
 
 # Create your views here.
 
@@ -17,7 +18,6 @@ def home_view(request):
       first_letter = b4_state[0].capitalize()
       rest_of_word = b4_state[1:]
       state = first_letter + rest_of_word
-      
       if len(Post.objects.filter(state=state)) < 1:
         data = Post.objects.all()
         warning = 'We could not find this one :('
@@ -28,6 +28,7 @@ def home_view(request):
         sub = ''
 
       return render(request, "home.html", {"form":form, "data": data, "warn": warning, "sub": sub})
+  
   return render(request, "home.html", {"form":form, "data": Post.objects.all()})
   
 
@@ -53,11 +54,28 @@ def post_view(request):
       city = form.cleaned_data.get('city')
       image = form.cleaned_data.get('image')
       desc = form.cleaned_data.get('desc')
+      lat = form.cleaned_data.get('lat')
+      long = form.cleaned_data.get('long')
+      print(lat)
+      print(long)
+      if lat != "" and long != "":
+        print('here')
+        f = open("MOCK_DATA-2.csv", "a")
+        now = datetime.datetime.now()
+        formatted_time = now.strftime("%I:%M:%S %p")
+
+        today = datetime.date.today()
+        formatted_date = today.strftime("%Y-%m-%d")
+        f.writelines(f"\n{city}, {state}, {formatted_date}, {formatted_time}, {long}, {lat}")
+
+
       obj = Post(name = name, 
                 state = state,
                 city = city,
                 image= image,
-                desc = desc)
+                desc = desc,
+                lat = lat,
+                long = long,)
       obj.save()
 
   else:
