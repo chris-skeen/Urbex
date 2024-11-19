@@ -3,13 +3,21 @@
 {% block content %}
   <div class="left">
     <h1 class="what-is-h1">What is Urbex?</h1>
+    <hr></hr>
     <p class="what-is-p">Urbex is a website used to find and explore abandoned places near you! With filtering and other options available. The users are able to make their own posts.</p>
     <img class="urbex-icon-thing" src="{% static "images/urbex-icon.png" %}">
   </div>
   <div class="right">
-    <h1 class="what-is-h1">Color Palette:</h1>
+    <h1 class="color-palette-header ">Color Palette</h1>
+    <hr></hr>
     <img class="color-palette" src="{% static "images/color-pallete.png" %}"/>
   </div>
-  <h1 class="features-header">Key Features</h1>
+  <h1 class="features-header">Skills Learned</h1>
   <hr></hr>
+  <ul>
+    <li class="key-features">How to save items to a data base in Django based on my own model.</li>
+    <li class="key-features">How to display data from a database in Django.</li>
+    <li class="key-features">Using Forms to grab certain data using required and non-required fields.</li>
+    <li class="key-features">Styling forms with Widget Tweaks.</li>
+  </ul>
 {% endblock content %}

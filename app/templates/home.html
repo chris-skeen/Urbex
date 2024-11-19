@@ -2,6 +2,11 @@
 {% load widget_tweaks %}
 {% load static %}
 {% block content %}
+<div class="center-icons">
+<a href="https://github.com/chris-skeen" target="_blank"><img class="github-icon" src="{% static "images/github.png" %}"></a>
+<a href="https://www.linkedin.com/in/robbin-skeen-39b94b324/" target="_blank"><img class="linkedin-icon" src="{% static "images/linkedin.webp" %}"></a>
+<a href="mailto:cskeen25@basecampcodingacademy.org"><img class="email-icon" src="{% static "images/email.webp" %}"></a>
+</div>
 <form action="" method="get">
   <div class="text-box-center">
   {% render_field form.state placeholder="State" class+="state-box"%}
@@ -10,7 +15,7 @@
   <button class="state-filter-btn">Search</button>
   </div>
   <h3 class="warning">{{warn}}</h3>
-  <h4 class="sub"><i>{{sub}}</i></h4t>
+  <h4 class="sub"><i>{{sub}}</i></h4>
 </form>
 {% for i in data %}
 <div class="main-post-div">
@@ -21,7 +26,9 @@
   <img class="area_image" src="http://127.0.0.1:8000/media/{{i.image}}" width="500" height="600" />
   <h3 class="city-name">{{i.city}}</h3>
   <h3 class="desc">{{i.desc}}</h3>
-  <img class="urbex-icon-forp" src="{% static "images/urbex-icon.png" %}"/>
+  <div class="urbex-icon-forp-div">
+    <img class="urbex-icon-forp" src="{% static "images/urbex-icon.png" %}"/>
+  </div>
 </div>
 </div>
 {% endfor %}
