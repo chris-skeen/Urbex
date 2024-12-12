@@ -22,14 +22,15 @@
       </ul>
     </nav>
   </header>
+
+  {% block content %}
+
+  {% endblock content %}
   <div class="center-icons">
     <a href="https://github.com/chris-skeen" target="_blank"><img class="github-icon" src="{% static "images/github.png" %}"></a>
     <a href="https://www.linkedin.com/in/robbin-skeen-39b94b324/" target="_blank"><img class="linkedin-icon" src="{% static "images/linkedin.webp" %}"></a>
     <a href="mailto:cskeen25@basecampcodingacademy.org"><img class="email-icon" src="{% static "images/email.webp" %}"></a>
   </div>
-  {% block content %}
-
-  {% endblock content %}
   <script src="{% static 'script.js' %}"></script>
 </body>
 </html>

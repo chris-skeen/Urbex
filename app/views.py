@@ -76,6 +76,7 @@ def post_view(request):
                 desc = desc,
                 lat = lat,
                 long = long,)
+  
       obj.save()
 
   else:
