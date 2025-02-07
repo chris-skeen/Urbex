@@ -28,7 +28,7 @@ SECRET_KEY = "django-insecure-9_+9&4!=9$6)c)sbdat$#bl!5l(6@arj@a@)w)3ljz478j%ey+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["urbexx-b8fb6a6901dc.herokuapp.com"]
+ALLOWED_HOSTS = ["urbexx-b8fb6a6901dc.herokuapp.com", '.herokuapp.com',]
 
 
 # Application definition
@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "app",
     "widget_tweaks",
-    "bootstrap5",
+    "whitenoise.runserver_nostatic",
 ]
 
 MIDDLEWARE = [
